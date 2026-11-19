@@ -22,7 +22,7 @@ window.BILLOW_SITE = {
   // 中文版的内测申请：填微信号，或放一张二维码图片（例 "assets/wechat-qr.png"），两个都填也行。
   // 填了之后，中文版的申请入口变成加微信
   wechat: {
-    id: "",
+    id: "gslubsg",
     qr: ""
   },
 
