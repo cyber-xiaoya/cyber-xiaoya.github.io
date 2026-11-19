@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>麦浪 Billow：生而为真</title>
+<meta name="description" content="画面由 AI 实时生成的数字人直播。她会看弹幕、会接话、会笑，每一秒都是现场的。不出画面，只用声音也能播。">
+<meta property="og:title" content="麦浪 Billow：生而为真">
+<meta property="og:description" content="画面由 AI 实时生成的数字人直播，每一秒都是现场的。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/console.jpg">
+<meta name="theme-color" content="#0A0C10">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<header class="top">
+  <a class="brand" href="#" aria-label="麦浪 Billow">
+    <svg class="mark" viewBox="0 0 24 24" aria-hidden="true"><g fill="currentColor"><rect x="1.45" y="9.60" width="2.35" height="11.60" rx="1.175"/><rect x="5.20" y="4.40" width="2.35" height="16.80" rx="1.175"/><rect x="8.95" y="2.80" width="2.35" height="18.40" rx="1.175"/><rect x="12.70" y="5.40" width="2.35" height="15.80" rx="1.175"/><rect x="16.45" y="9.80" width="2.35" height="11.40" rx="1.175"/><rect x="20.20" y="11.40" width="2.35" height="9.80" rx="1.175"/></g></svg>
+    <span data-i18n="brand">麦浪</span>
+  </a>
+  <nav class="nav" aria-label="页内导航">
+    <a href="#does" data-i18n="nav.does">她会做什么</a>
+    <a href="#cards" data-i18n="nav.cards">角色卡</a>
+    <a href="#how" data-i18n="nav.how">怎么用</a>
+    <a href="#steady" data-i18n="nav.steady">为什么稳</a>
+    <a href="#who" data-i18n="nav.who">给谁用</a>
+  </nav>
+  <div class="top-end">
+    <button class="lang" type="button" id="lang-toggle" aria-label="Switch language">English</button>
+    <a class="btn btn-small" href="#join" data-i18n="cta.join">申请内测</a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <h1 data-i18n="hero.h1">生而为真</h1>
+      <p class="tagline" data-i18n="hero.tag">AI 实时生成的数字人</p>
+      <p class="lede" data-i18n="hero.lede">画面由 AI 实时生成。她会看弹幕、会接话、会笑，每一秒都是现场的。不出画面，只用声音也能播。</p>
+      <div class="actions">
+        <a class="btn" href="#join" data-i18n="cta.join">申请内测</a>
+        <a class="btn btn-quiet" href="#download" data-i18n="cta.download">下载客户端</a>
+      </div>
+      <p class="note" data-i18n="hero.note">现在是内测阶段，名额分批放。</p>
+    </div>
+    <div class="cast" aria-hidden="true">
+      <figure class="pcard c1"><img src="assets/cards/xiaoya.jpg" alt="" width="720" height="960"><span class="pill" data-i18n="card.idle">待机</span><figcaption data-i18n="card.xiaoya">小雅</figcaption></figure>
+      <figure class="pcard c2"><img src="assets/cards/haitang.jpg" alt="" width="720" height="960"><span class="pill on" data-i18n="console.live">直播中</span><figcaption data-i18n="card.haitang">海棠</figcaption></figure>
+      <figure class="pcard c3"><img src="assets/cards/xixi.jpg" alt="" width="720" height="960"><span class="pill" data-i18n="card.idle">待机</span><figcaption data-i18n="card.xixi">汐汐</figcaption></figure>
+    </div>
+  </div>
+  <div class="field"><canvas id="field" aria-hidden="true"></canvas></div>
+</section>
+
+<section class="band" id="does">
+  <div class="wrap">
+    <h2 data-i18n="does.h2">播的时候，她在做这些</h2>
+    <p class="sub" data-i18n="does.sub">控制台上每一步都写着原因。你看得见她做了什么，也看得见为什么。</p>
+
+    <div class="does-stack">
+      <figure class="shot">
+        <img src="assets/console.jpg" width="1328" height="692" loading="lazy" alt="直播中的控制台：左边是她在做什么和原因，中间是她的画面，右边是直播间的聊天和礼物" data-i18n-attr="alt:console.aria">
+        <figcaption data-i18n="console.cap">控制台实拍。左边是她的打算和每一步的原因，中间是画面，右边是直播间。</figcaption>
+      </figure>
+
+      <dl class="does-list">
+        <div><dt data-i18n="does.1t">接弹幕</dt><dd data-i18n="does.1d">有人问她就答，没人说话她自己找话。来过的观众，她记得。</dd></div>
+        <div><dt data-i18n="does.2t">谢礼物</dt><dd data-i18n="does.2d">礼物一到就有动作。一下来了好几份，她合在一起谢，不打断正在说的话。</dd></div>
+        <div><dt data-i18n="does.3t">演节目、唱歌</dt><dd data-i18n="does.3d">观众点个动作她就做，气氛慢下来她会自己起一首歌。竖屏横屏都能播。</dd></div>
+        <div><dt data-i18n="does.4t">听你的</dt><dd data-i18n="does.4d">你打一句话，她一字不差地说出来。全程你来指挥，还是全交给她，自己选。</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="demo" hidden>
+  <div class="wrap">
+    <h2 data-i18n="demo.h2">看她播一段</h2>
+    <div class="video" id="demo-slot"></div>
+  </div>
+</section>
+
+<section class="band" id="cards">
+  <div class="wrap">
+    <h2 data-i18n="cards.h2">先从现成的角色卡开始</h2>
+    <p class="sub" data-i18n="cards.sub">广场上有官方卡，复制一份就是你自己的，怎么改都不影响原来那张。也可以用自己的照片和声音从头做。</p>
+    <ul class="plaza">
+      <li><figure class="pcard"><img src="assets/cards/xiaoya.jpg" alt="" width="720" height="960" loading="lazy"><figcaption data-i18n="card.xiaoya">小雅</figcaption></figure><p data-i18n="card.xiaoya.d">爱操心、记性差的邻家助理，嘴上嘴硬手上很暖</p></li>
+      <li><figure class="pcard"><img src="assets/cards/haitang.jpg" alt="" width="720" height="960" loading="lazy"><figcaption data-i18n="card.haitang">海棠</figcaption></figure><p data-i18n="card.haitang.d">二十岁，话少、慢热，什么都看在眼里不说破</p></li>
+      <li><figure class="pcard"><img src="assets/cards/xixi.jpg" alt="" width="720" height="960" loading="lazy"><figcaption data-i18n="card.xixi">汐汐</figcaption></figure><p data-i18n="card.xixi.d">从海里来的冷淡小妖精，慢半拍，熟了才露出黏人那面</p></li>
+      <li><figure class="pcard"><img src="assets/cards/aniu.jpg" alt="" width="720" height="960" loading="lazy"><figcaption data-i18n="card.aniu">阿牛</figcaption></figure><p data-i18n="card.aniu.d">新来的实习生，看着挺酷，一开口就露怯；做事特别认真</p></li>
+      <li><figure class="pcard"><img src="assets/cards/zhenzhu.jpg" alt="" width="720" height="960" loading="lazy"><figcaption data-i18n="card.zhenzhu">真珠</figcaption></figure><p data-i18n="card.zhenzhu.d">话慢半拍、刀口很准的主理人，不笑的时候像在审人</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="band" id="how">
+  <div class="wrap">
+    <h2 data-i18n="how.h2">从一张照片到一场直播</h2>
+    <ol class="steps">
+      <li><h3 data-i18n="how.1t">做一张角色卡</h3><p data-i18n="how.1d">一张照片、一个声音、一句话性格。声音可以挑现成的，也可以克隆你自己的。</p></li>
+      <li><h3 data-i18n="how.2t">连线</h3><p data-i18n="how.2d">选一张卡，开播前自动检查一遍，然后开始。画面交给直播伴侣或 OBS。</p></li>
+      <li><h3 data-i18n="how.3t">看着</h3><p data-i18n="how.3d">她在播，你在控制台。想让她说什么、做什么，随时插进去。</p></li>
+      <li><h3 data-i18n="how.4t">复盘</h3><p data-i18n="how.4d">下播后看这一场的数据，还有她新记住了谁。</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="band" id="steady">
+  <div class="wrap split">
+    <div class="split-head">
+      <h2 data-i18n="steady.h2">直播不能停，<br>所以是这样造的</h2>
+      <p class="sub" data-i18n="steady.sub">说错一句收不回来，断一次观众就走了。这几条是地基，不是功能。</p>
+    </div>
+    <dl class="rules">
+      <div><dt data-i18n="steady.1t">大脑在云端</dt><dd data-i18n="steady.1d">她的每一场都跑在云端。你的电脑死机、断网、重启，重新打开客户端就接回去，直播没断。</dd></div>
+      <div><dt data-i18n="steady.2t">快的事不等慢的事</dt><dd data-i18n="steady.2d">谢礼物、回弹幕要在一秒内；想下一个节目可以想几分钟。两条路并排走，谁也不拖谁。</dd></div>
+      <div><dt data-i18n="steady.3t">所有话只走一个出口</dt><dd data-i18n="steady.3d">她自己想说的，和你让她说的，出口前过同一道安全检查。不该读的弹幕不读，不该做的动作不做。</dd></div>
+      <div><dt data-i18n="steady.4t">坏了降级，不黑屏</dt><dd data-i18n="steady.4d">模型出问题有备用，备用也不行还有规则顶上。观众看到的是她还在播。</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="band" id="who">
+  <div class="wrap">
+    <h2 data-i18n="who.h2">给谁用</h2>
+    <div class="who">
+      <div><h3 data-i18n="who.1t">公会和 MCN</h3><p data-i18n="who.1d">把人手从「一个人盯一场」里放出来。运营只在需要的时候插一句话。</p></div>
+      <div><h3 data-i18n="who.2t">出海团队</h3><p data-i18n="who.2d">当地的黄金时段是你的半夜。她来播，你不用每一场都守到天亮。</p></div>
+      <div><h3 data-i18n="who.3t">一个人</h3><p data-i18n="who.3d">没有团队，也不想出镜，照样能有一个自己的直播间。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band join" id="join">
+  <div class="wrap split">
+    <div>
+      <h2 data-i18n="join.h2">申请内测</h2>
+      <p class="sub" data-i18n="join.sub">留个邮箱。名额放到你的时候，安装包和登录方式会发到这个邮箱。</p>
+      <form id="join-form" novalidate>
+        <label><span data-i18n="join.email">邮箱</span>
+          <input type="email" name="email" required autocomplete="email" placeholder="you@example.com"></label>
+        <label><span data-i18n="join.role">你是</span>
+          <select name="role">
+            <option value="solo" data-i18n="join.r1">个人主播</option>
+            <option value="guild" data-i18n="join.r2">公会 / MCN</option>
+            <option value="overseas" data-i18n="join.r3">出海团队</option>
+            <option value="other" data-i18n="join.r4">其他</option>
+          </select></label>
+        <label><span data-i18n="join.note">想用她播什么（选填）</span>
+          <textarea name="note" rows="3"></textarea></label>
+        <button class="btn" type="submit" data-i18n="join.submit">申请内测</button>
+        <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+
+    <aside class="side">
+      <div id="download">
+        <h3 data-i18n="dl.h3">下载客户端</h3>
+        <div class="dl">
+          <a class="btn btn-quiet" data-dl="mac" href="#join">macOS</a>
+          <a class="btn btn-quiet" data-dl="win" href="#join">Windows</a>
+        </div>
+        <p class="note" id="dl-note" data-i18n="dl.pending">安装包随内测名额一起发。先申请，轮到你时会收到下载地址。</p>
+      </div>
+      <div id="contact" hidden>
+        <h3 data-i18n="contact.h3">直接聊</h3>
+        <p class="note" data-i18n="contact.sub">公会、MCN 合作，或者想先看一场演示，加微信说。</p>
+        <img id="wechat-qr" class="qr" alt="微信二维码" hidden>
+        <p class="contact-row" id="wechat-row" hidden><span data-i18n="contact.wechat">微信</span><b id="wechat-id"></b><button type="button" class="copy" id="wechat-copy" data-i18n="contact.copy">复制</button></p>
+        <p class="contact-row" id="email-row" hidden><span data-i18n="contact.email">邮箱</span><a id="email-link"></a></p>
+      </div>
+    </aside>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p class="foot-line" data-i18n="foot.line">一整片麦子在风里起伏。上千株，一个动作。</p>
+    <p class="foot-meta"><span data-i18n="foot.name">麦浪 Billow</span> © <span id="year">2026</span></p>
+  </div>
+</footer>
+
+<script src="site.config.js"></script>
+<script src="assets/i18n.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>
