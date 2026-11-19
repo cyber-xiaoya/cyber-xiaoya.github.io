@@ -14,7 +14,7 @@ window.BILLOW_SITE = {
 
   // 英文版的内测申请：填 Google 表单的链接（表单右上角「发送」→ 链接）。
   // 填了之后，英文版的申请入口变成一个打开这份表单的按钮
-  googleFormUrl: "",
+  googleFormUrl: "https://docs.google.com/forms/d/e/1FAIpQLSc9nfwQCLwJNbU-PFR7RG1MCa_iRhK0DDWonjewUrqCi_bhyA/viewform",
 
   // 对外联系邮箱。formEndpoint 留空时，表单会改成打开访客的邮件客户端发到这个地址
   email: "",
