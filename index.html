@@ -140,7 +140,15 @@
   <div class="wrap split">
     <div>
       <h2 data-i18n="join.h2">申请内测</h2>
-      <p class="sub" data-i18n="join.sub">留个邮箱。名额放到你的时候，安装包和登录方式会发到这个邮箱。</p>
+      <p class="sub" id="join-sub" data-i18n="join.sub">留个邮箱。名额放到你的时候，安装包和登录方式会发到这个邮箱。</p>
+      <div id="join-wechat" class="join-alt" hidden>
+        <img id="wechat-qr" class="qr" alt="微信二维码" hidden>
+        <p class="contact-row" id="wechat-row" hidden><span data-i18n="contact.wechat">微信</span><b id="wechat-id"></b><button type="button" class="copy" id="wechat-copy" data-i18n="contact.copy">复制</button></p>
+      </div>
+      <div id="join-google" class="join-alt" hidden>
+        <a class="btn" id="google-link" target="_blank" rel="noopener" data-i18n="join.gbtn">打开申请表</a>
+        <p class="note" data-i18n="join.gnote">会在新标签页打开一份 Google 表单。</p>
+      </div>
       <form id="join-form" novalidate>
         <label><span data-i18n="join.email">邮箱</span>
           <input type="email" name="email" required autocomplete="email" placeholder="you@example.com"></label>
@@ -169,9 +177,7 @@
       </div>
       <div id="contact" hidden>
         <h3 data-i18n="contact.h3">直接聊</h3>
-        <p class="note" data-i18n="contact.sub">公会、MCN 合作，或者想先看一场演示，加微信说。</p>
-        <img id="wechat-qr" class="qr" alt="微信二维码" hidden>
-        <p class="contact-row" id="wechat-row" hidden><span data-i18n="contact.wechat">微信</span><b id="wechat-id"></b><button type="button" class="copy" id="wechat-copy" data-i18n="contact.copy">复制</button></p>
+        <p class="note" data-i18n="contact.sub">公会、MCN 合作，或者想先看一场演示，发邮件说。</p>
         <p class="contact-row" id="email-row" hidden><span data-i18n="contact.email">邮箱</span><a id="email-link"></a></p>
       </div>
     </aside>

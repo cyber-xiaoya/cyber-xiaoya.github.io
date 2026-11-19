@@ -59,7 +59,16 @@
       $("#email-link").textContent = CFG.email; $("#email-link").href = "mailto:" + CFG.email;
       $("#email-row").hidden = false;
     }
-    $("#contact").hidden = !(w.qr || w.id || CFG.email);
+    $("#contact").hidden = !CFG.email;
+
+    // 申请内测的入口：中文版有微信就用微信，英文版有 Google 表单就用表单，都没有才用页内表单
+    var useWx = lang === "zh" && !!(w.qr || w.id);
+    var useG = lang === "en" && !!CFG.googleFormUrl;
+    $("#join-wechat").hidden = !useWx;
+    $("#join-google").hidden = !useG;
+    $("#join-form").hidden = useWx || useG;
+    if (useG) $("#google-link").href = CFG.googleFormUrl;
+    $("#join-sub").innerHTML = useWx ? t("join.sub.wx") : useG ? t("join.sub.g") : t("join.sub");
   }
   $("#wechat-copy").addEventListener("click", function () {
     var btn = this, id = (CFG.wechat || {}).id || "";

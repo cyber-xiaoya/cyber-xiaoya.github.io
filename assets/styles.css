@@ -164,6 +164,10 @@ form .btn { justify-self: start; }
 .form-msg { min-height: 1.6em; font-size: 14.5px; color: var(--accent-text); }
 .form-msg.bad { color: #F2A3A6; }
 
+.join-alt { margin-top: 32px; }
+.join-alt .contact-row b { font-size: 24px; letter-spacing: .01em; }
+.join-alt .contact-row span { font-size: 16px; }
+.join-alt .qr { width: 180px; height: 180px; margin-top: 0; }
 .side { display: grid; gap: 44px; padding-top: 8px; }
 .dl { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 12px; }
 .qr { display: block; width: 148px; height: 148px; margin-top: 16px; border-radius: var(--r-card); background: #fff; }

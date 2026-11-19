@@ -27,9 +27,10 @@ python3 -m http.server 8000
 
 | 项 | 不填会怎样 |
 |---|---|
-| `formEndpoint` 或 `email` | 内测申请提交不出去，页面会提示表单没接上 |
+| `wechat.id` / `wechat.qr` | 中文版的内测申请入口退回页内表单 |
+| `googleFormUrl` | 英文版的内测申请入口退回页内表单 |
+| `formEndpoint` 或 `email` | 页内表单提交不出去（上面两项都填了就用不到它） |
 | `downloads.mac` / `downloads.win` | 下载按钮跳到内测申请，并提示「安装包随内测名额一起发」 |
-| `wechat.id` / `wechat.qr` | 「直接聊」这一块不显示 |
 | `demoVideo` | 「看她播一段」这一节不显示 |
 
 ## 语言

@@ -12,10 +12,15 @@ window.BILLOW_SITE = {
   // 例： "https://formspree.io/f/xxxxxxx"
   formEndpoint: "",
 
+  // 英文版的内测申请：填 Google 表单的链接（表单右上角「发送」→ 链接）。
+  // 填了之后，英文版的申请入口变成一个打开这份表单的按钮
+  googleFormUrl: "",
+
   // 对外联系邮箱。formEndpoint 留空时，表单会改成打开访客的邮件客户端发到这个地址
   email: "",
 
-  // 微信：填微信号，或放一张二维码图片（例 "assets/wechat-qr.png"），两个都填也行
+  // 中文版的内测申请：填微信号，或放一张二维码图片（例 "assets/wechat-qr.png"），两个都填也行。
+  // 填了之后，中文版的申请入口变成加微信
   wechat: {
     id: "",
     qr: ""
